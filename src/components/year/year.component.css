@@ -1,0 +1,11 @@
+.year {
+  text-align: center;
+  font-size: 100px;
+  font-family: 'Assistant', sans-serif;
+  margin-top: 25px;
+}
+
+.list_month {
+  display: flex;
+  flex-wrap: wrap;
+} 
