@@ -2,23 +2,167 @@
   width: 400px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-bottom: 10px;
-  background-color: green;
+  margin-bottom: 85px;
+  padding-bottom: 10px;
+  padding-top: 15px;
   text-align: center;
+  min-height: 250px;
+  border-radius: 45px;
+  position: relative;
+}
+
+.month_title {
+  position: absolute;
+  top: -45px;
+  left: 140px;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: -15px;
+  height: 110px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#month_title0{
+  background-color: #017bbc;
+}
+
+#month_title1{
+  background-color: #0099d2;
+}
+
+#month_title2{
+  background-color: #009d50;
+}
+
+#month_title3{
+  background-color: #74ae36;
+}
+
+#month_title4{
+  background-color: #abc619;
+}
+
+#month_title5{
+  background-color: #eaab0e;
+}
+
+#month_title6{
+  background-color: #e88810;
+}
+
+#month_title7{
+  background-color: #e83610;
+}
+
+#month_title8{
+  background-color: #e02c4f;
+}
+
+#month_title9{
+  background-color: #b3357c;
+}
+
+#month_title10{
+  background-color: #6d3f97;
+}
+
+#month_title11{
+  background-color: #453f97
 }
 
 .date_Content {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  margin-top: 50px;
 }
 
 .day_In_Week {
   text-align: center;
-  width: 55px;
+  width: 57px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  border-bottom: 2px solid white;
+  margin-bottom: 10px;
 }
 
 .day_In_Month {
   text-align: center;
-  width: 55px;
-} 
+  width: 57px;
+  padding-bottom: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+#month0 {
+  background-color: #0096e7;
+}
+
+#month1 {
+  background-color: #01b6eb;
+}
+
+#month2 {
+  background-color: #00b95e;
+}
+
+#month3 {
+  background-color: #89cb47;
+}
+
+#month4 {
+  background-color: #d8e124;
+}
+
+#month5 {
+  background-color: #fac41a;
+}
+
+#month6 {
+  background-color: #fba119;
+}
+
+#month7 {
+  background-color: #f74d29;
+}
+
+#month8 {
+  background-color: #f44b62;
+}
+
+#month9 {
+  background-color: #ce4593;
+}
+
+#month10 {
+  background-color: #8e57bd;
+}
+
+#month11 {
+  background-color: #635bc8;
+}
+/* 
+.month-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.month {
+  display: flex;
+  width: 300px;
+}
+
+.month-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.day {
+  width: 60px;
+} */

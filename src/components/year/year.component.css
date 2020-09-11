@@ -1,11 +1,42 @@
 .year {
+  width: 400px;
+  margin: auto;
   text-align: center;
   font-size: 100px;
-  font-family: 'Assistant', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-top: 25px;
+  margin-bottom: 60px;
+  position: relative;
 }
 
 .list_month {
   display: flex;
   flex-wrap: wrap;
-} 
+  max-width: 1300px;
+  margin-left: 25px;
+}
+
+.btn_year {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  position: absolute;
+}
+
+.prev {
+  margin-right: 15px;
+  top: 35px;
+  left: 0;
+}
+
+.next {
+  margin-left: 15px;
+  top: 35px;
+  right: 0;
+}

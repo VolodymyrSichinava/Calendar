@@ -1,29 +1,38 @@
+import './month.component.css';
 import React, { Component } from 'react';
 
 export default class MonthComponent extends Component {
 
-  state = {
-    number: 0,
-  }
-
-  componentDidMount() {
-  }
-
-  buttonClickHandler = (e) => {
-    this.setState({
-      number: this.state.number + 1,
-    });
-  }
-
   render() {
 
-    const title = this.props.startDate.toLocaleString('default', { month: 'long' })
+    const startDate = this.props.startDate;
+    const title = startDate.toLocaleString('default', { month: 'long' });
+    const tempDate = new Date(startDate);
+    const days = [];
+
+    let day = 1;
+    while (tempDate.getMonth() === startDate.getMonth()) {
+      days.push(day);
+      day = day + 1;
+      tempDate.setDate(day);
+    }
+
+    for (let i = startDate.getDay(); i > 0; i--) {
+      days.unshift('');
+    }
+
+    const dayTitles = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 
     return (
-    <div className='month'>{title} {this.state.number}
-      <button type='button' onClick={this.buttonClickHandler}>Button</button>
+     <div className='month-wrapper'> 
+      <div className='month'>
+        {title}
+      </div>
+      <div className='month-content'>
+        {dayTitles.map(day => <div className='day day-title'>{day}</div>)}
+        {days.map(day => <div className='day'>{day}</div>)}
+      </div>
     </div>
     )
   }
-
 } 

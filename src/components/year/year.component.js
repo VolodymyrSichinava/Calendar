@@ -12,25 +12,27 @@ export default class YearComponent extends Component {
       currentYear: this.state.currentYear - 1,
     })
   }
-
   buttonNextClickHandler = () => {
     this.setState({
-      year: this.state.year + 1,
+      currentYear: this.state.currentYear + 1,
     })
   }
 
   render() {
-    YEAR = this.state.year;
+    
+    const months =  Array(12).fill(null).map((x, index) => {
+      return (<Month startDate={new Date(this.state.currentYear, index, 1)}/>);
+    });
 
     return (
       <div className="App">
         <div className='year'>
           <button type="button" onClick={this.buttonPrevClickHandler}>Prev</button>
-          {this.state.year}
+          {this.state.currentYear}
           <button type="button" onClick={this.buttonNextClickHandler}>Next</button>
         </div>
         <div className='list_month'>
-          {this.state.months.map(month => <Month number={month.number} startDate={month.startDate}/>)}
+          {months}
         </div>
       </div>
     );
