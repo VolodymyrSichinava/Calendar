@@ -1,6 +1,9 @@
-.app {
+body {
+  background-color: #58575c;
+  height: 100%;
+}
+
+.App {
   width: 1300px;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
 }

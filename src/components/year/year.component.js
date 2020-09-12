@@ -27,9 +27,9 @@ export default class YearComponent extends Component {
     return (
       <div className="App">
         <div className='year'>
-          <button type="button" onClick={this.buttonPrevClickHandler}>Prev</button>
+          <button type="button" className='btn_year prev' onClick={this.buttonPrevClickHandler}>&lang;</button>
           {this.state.currentYear}
-          <button type="button" onClick={this.buttonNextClickHandler}>Next</button>
+          <button type="button" className='btn_year next' onClick={this.buttonNextClickHandler}>&rang;</button>
         </div>
         <div className='list_month'>
           {months}

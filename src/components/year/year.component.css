@@ -1,19 +1,14 @@
 .year {
   width: 400px;
   margin: auto;
-  text-align: center;
-  font-size: 100px;
-  font-family: 'Roboto', sans-serif;
-  margin-top: 25px;
-  margin-bottom: 60px;
-  position: relative;
-}
-
-.list_month {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 1300px;
-  margin-left: 25px;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-size: 80px;
+  font-family: 'Kufam', cursive;
+  color: white;
+  margin-top: 60px;
+  position: relative;
 }
 
 .btn_year {
@@ -31,12 +26,19 @@
 
 .prev {
   margin-right: 15px;
-  top: 35px;
+  top: 20px;
   left: 0;
 }
 
 .next {
   margin-left: 15px;
-  top: 35px;
+  top: 20px;
   right: 0;
+}
+
+.list_month {
+  justify-content: center;
+  width: 1300px;
+  display: flex;
+  flex-wrap: wrap;
 }
