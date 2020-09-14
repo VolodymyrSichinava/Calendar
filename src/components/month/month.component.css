@@ -16,6 +16,12 @@
   justify-content: center;
   font-size: 35px;
   padding-bottom: 25px;
+  position: relative;
+}
+
+.month a {
+  color: white;
+  text-decoration: none;
 }
 
 .month-content {
@@ -25,19 +31,15 @@
   font-size: 20px;
 }
 
-.day-title {
-  width: 56px;
-  display: flex;
-  justify-content: center;
-  font-style: italic;
-  margin-bottom: 15px;
+.month-page .month-wrapper {
+  width: 900px;
+  margin: auto;
+  margin-top: 70px;
 }
 
-.day {
-  width: 56px;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 4px;
+.month-page .month-content {
+  margin: auto;
+  width: 900px;
 }
 
 #month0 {
@@ -92,4 +94,8 @@
   position: absolute;
   top: -20px;
   left: 160px;
+}
+
+.month-page .knop {
+  left: 420px;
 }
