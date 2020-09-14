@@ -1,0 +1,64 @@
+.month-page {
+  position: relative;
+}
+
+.monthBtn_prev,
+.monthBtn_next {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.monthBtn_prev {
+  top: 48px;
+  left: 830px;
+  position: absolute;
+  z-index: 100;
+}
+
+.monthBtn_next {
+  top: 48px;
+  left: 1030px;
+  position: absolute;
+  z-index: 100;
+}
+
+.month-page .month-content .today {
+  width: 38px;
+  margin: 0 44px;
+  background-color: white;
+  color: black;
+}
+
+.month-page .day {
+  width: 125px;
+  font-size: 25px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.month-page .day-title {
+  width: 125px;
+  font-size: 25px;
+}
+
+.month-page .knop {
+  left: 420px;
+}
+
+.month-page .month-wrapper {
+  width: 900px;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.month-page .month-content {
+  margin: auto;
+  width: 900px;
+}

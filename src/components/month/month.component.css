@@ -31,17 +31,6 @@
   font-size: 20px;
 }
 
-.month-page .month-wrapper {
-  width: 900px;
-  margin: auto;
-  margin-top: 70px;
-}
-
-.month-page .month-content {
-  margin: auto;
-  width: 900px;
-}
-
 #month0 {
   background-color: #232162;
 }
@@ -94,8 +83,4 @@
   position: absolute;
   top: -20px;
   left: 160px;
-}
-
-.month-page .knop {
-  left: 420px;
 }

@@ -1,7 +1,7 @@
 import './App.css';
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
-import { YearPage, NavBar, Month } from './components';
+import { YearPage, NavBar, MonthPage } from './components';
 
 export default class App extends Component {
   render() {
@@ -31,9 +31,7 @@ export default class App extends Component {
 
             <Route path='/year/:year/month/:month' exact render={({ match }) => {
               return (
-                <div className='month-page'>
-                  <Month startDate={new Date(Number(match.params.year), Number(match.params.month) - 1)}/>
-                </div>
+                <MonthPage year={match.params.year} month ={match.params.month}/>
               )
             }}/>
 
