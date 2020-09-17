@@ -35,7 +35,7 @@ export default class MonthComponent extends Component {
       <div className='month-content'>
         <img className='knop' src={img} alt='Knop' style={{width: '40px', height: '60px'}}/>
         {dayTitles.map((day, index) => <div key={'title' + index} className='day day-title'>{day}</div>)}
-        {days.map((day, index) => <Day key={index} date={day}/>)}
+        {days.map((day, index) => <Day key={index} date={day} todos={this.props.todos}/>)}
       </div>
     </div>
     )
