@@ -11,7 +11,7 @@ export default class monthPageComponent extends Component {
           <button type="button" className='monthBtn_prev'>&lang;</button>
         </Link>
         <div className='month-page'>
-          <Month startDate={new Date(Number(this.props.year), Number(this.props.month) - 1)}/>
+          <Month year={this.props.year} month={this.props.month}/>
         </div>
         <Link to={`/year/${this.props.year}/month/${Number(this.props.month) + 1}`}>
           <button type="button" className='monthBtn_next'>&rang;</button>

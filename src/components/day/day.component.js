@@ -2,18 +2,23 @@ import './day.component.css';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
+import { isEmpty } from 'lodash';
 
 export default class DayComponent extends Component {
   render() {
-    const date = this.props.date;
-    if (!date) {
+    const { year, month, day } = this.props;
+    const today = new Date(year, month, day);
+    if (!day) {
       return (<div className='day'></div>);
     }
-    const isToday = date && (new Date().toDateString() === date.toDateString());
+    const isToday = new Date().toDateString() === today.toDateString();
     return (
-      <Link to={`/year/${date.getFullYear()}/month/${date.getMonth() + 1}/day/${date.getDate()}`}>
-        <div className={classnames({ day: true, today: isToday })}>
-          {date ? date.getDate() : null}
+      <Link 
+        to={`/year/${year}/month/${month}/day/${day}`} 
+        className={classnames({day: true, 'has-todos': !isEmpty(this.props.todos)})}
+      >
+        <div className={classnames({ today: isToday })}>
+          {day || null}
         </div>
       </Link>
     );

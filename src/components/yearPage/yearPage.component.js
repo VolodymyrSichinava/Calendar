@@ -2,11 +2,11 @@ import './yearPage.component.css';
 import React, { Component } from 'react';
 import { Month} from '..';
 import { Link } from 'react-router-dom';
+import { get } from 'lodash';
 
 export default class YearComponent extends Component {
   render() {
-    console.log('Year page render', this.props.todos);
-    const months =  Array(12).fill(null).map((x, index) => new Date(this.props.year, index, 1));
+    const months =  Array(12).fill(null).map((x, index) => index + 1);
     return (
       <div className="App">
         <div className='year'>
@@ -19,8 +19,12 @@ export default class YearComponent extends Component {
           </Link>
         </div>
         <div className='list_month'>
-          {months.map(startDate => (
-            <Month key={startDate.toISOString()} startDate={startDate} todos={this.props.todos}/>
+          {months.map(month => (
+            <Month 
+              key={month} 
+              year={this.props.year}
+              month={month}
+              todos={get(this.props.todos, month, {})}/>
           ))}
         </div>
       </div>

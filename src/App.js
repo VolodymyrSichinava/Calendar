@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import { YearPage, NavBar, MonthPage, DayPage } from './components';
 import { todoService } from './services/todo.service';
+import { get } from 'lodash';
 
 export default class App extends Component {
 
@@ -11,13 +12,21 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({ todos: [1] })
-    }, 3000);
+    todoService.addEventListener('update', this.handleTodoUpdate);
+  }
+
+  componentWillUnmount() {
+    todoService.removeEventListener('update', this.handleTodoUpdate);
+  }
+
+  handleTodoUpdate = (event) => {
+    this.setState({
+      todos: event.detail,
+    });
   }
 
   render() {
-    console.log(this.state.todos);
+    const { todos } = this.state;
     return (
       <Router>
         <div className='app'>
@@ -45,23 +54,28 @@ export default class App extends Component {
 
             <Route path='/year/:year' exact render={({ match }) => {
               return (
-                <YearPage year={match.params.year} todos={this.state.todos}/>
+                <YearPage year={Number(match.params.year)} todos={get(todos, match.params.year, {})}/>
               )
             }}/>
 
             <Route path='/year/:year/month/:month' exact render={({ match }) => {
               return (
-                <MonthPage year={match.params.year} month ={match.params.month}/>
+                <MonthPage
+                  year={Number(match.params.year)}
+                  month ={Number(match.params.month)}
+                  todos={get(todos, [match.params.year, match.params.month], {})}
+                />
               )
             }}/>
 
             <Route path='/year/:year/month/:month/day/:day' exact render={({ match }) => {
               return (
-                <DayPage startDate={new Date(
-                  Number(match.params.year),
-                  Number(match.params.month) - 1,
-                  Number(match.params.day))
-                }/>
+                <DayPage 
+                  year={Number(match.params.year)}
+                  month={Number(match.params.month)}
+                  day={Number(match.params.day)}
+                  todos={get(todos, [match.params.year, match.params.month, match.params.day], [])}
+                />
               )
             }}/>
 

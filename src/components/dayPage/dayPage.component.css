@@ -52,3 +52,7 @@
   cursor: pointer;
   background-color:rgb(194, 194, 194);
 }
+
+.todo-item {
+  border: 1px solid white;
+}

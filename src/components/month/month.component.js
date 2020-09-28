@@ -2,11 +2,13 @@ import './month.component.css';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Day} from '..';
+import { get } from 'lodash';
 let img = require('../../images/knop.png');
 
 export default class MonthComponent extends Component {
   render() {
-    const startDate = this.props.startDate;
+    const { year, month } = this.props;
+    const startDate = new Date(year, month - 1);
     const title = startDate.toLocaleString('default', { month: 'long' });
     const tempDate = new Date(startDate);
     const days = [];
@@ -14,7 +16,7 @@ export default class MonthComponent extends Component {
     let day = 1;
     tempDate.setDate(day);
     while (tempDate.getMonth() === startDate.getMonth()) {
-      days.push(new Date(tempDate));
+      days.push(day);
       day = day + 1;
       tempDate.setDate(day);
     }
@@ -28,14 +30,20 @@ export default class MonthComponent extends Component {
     return (
      <div className='month-wrapper' id= {`month${tempDate.getMonth()}`}> 
       <div className='month'>
-        <Link to={`/year/${startDate.getFullYear()}/month/${startDate.getMonth() + 1}`}>
+        <Link to={`/year/${year}/month/${month}`}>
         {title}
         </Link>
       </div>
       <div className='month-content'>
         <img className='knop' src={img} alt='Knop' style={{width: '40px', height: '60px'}}/>
         {dayTitles.map((day, index) => <div key={'title' + index} className='day day-title'>{day}</div>)}
-        {days.map((day, index) => <Day key={index} date={day} todos={this.props.todos}/>)}
+        {days.map((day, index) => <Day 
+          key={index}
+          day={day} 
+          year={this.props.year} 
+          month={this.props.month} 
+          todos={get(this.props.todos, day, [])
+        }/>)}
       </div>
     </div>
     )
