@@ -9,6 +9,8 @@
   color: white;
   margin-top: 40px;
   position: relative;
+  animation: fadeInDown;
+  animation-duration: 2s;
 }
 
 .btn_year {

@@ -5,6 +5,8 @@
   justify-content: space-evenly;
   font-size: 35px;
   margin-top: 40px;
+  animation: fadeInDown;
+  animation-duration: 2s;
 }
 
 .navbar a {

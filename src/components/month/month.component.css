@@ -33,50 +33,74 @@
 
 #month0 {
   background-color: #232162;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 
 #month1 {
   background-color: #26a9e1;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 
 #month2 {
   background-color: #0e74bc;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 
 #month3 {
   background-color: #15a89e;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 
 #month4 {
   background-color: #0c9346;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 
 #month5 {
   background-color: #8ec840;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 
 #month6 {
   background-color: #d7e021;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 
 #month7 {
   background-color: #fcb040;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 
 #month8 {
   background-color: #f1592a;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 
 #month9 {
   background-color: #c01d2e;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 
 #month10 {
   background-color: #d91a5f;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 
 #month11 {
   background-color: #922791;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 
 .knop {

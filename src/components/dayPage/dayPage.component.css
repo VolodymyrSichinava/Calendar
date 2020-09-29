@@ -1,14 +1,15 @@
-.day-page{
+.day-page {
   width: 900px;
   margin: auto;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  padding-top: 200px;
+  padding-top: 20px;
   font-size: 35px;
   color: white;
   font-family: 'Roboto', sans-serif;
   position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .todo-form {
@@ -19,12 +20,10 @@
   margin: auto;
 }
 
-.imgForm {
-  width: 1500px;
-  height: 900px;
-  position: absolute;
-  top: -20px;
-  left: -300px;
+.dayImg {
+  width: 500px;
+  height: 500px;
+  text-align: center;
 }
 
 .todo-form input {
@@ -54,5 +53,41 @@
 }
 
 .todo-item {
+  width: 900px;
+  max-width: 900px;
+  overflow: hidden;
+  min-height: 90px;
+  display: block;
   border: 1px solid white;
+  padding-top: 15px;
+  word-wrap: break-word;
+}
+
+.button-add {
+  background-color: rgb(0, 223, 0);
+  border: none;
+  outline: none;
+  margin-top: 28px;
+  width: 500px;
+  height: 35px;
+  text-align: center;
+  display: block;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.button-add:hover {
+  background-color: rgb(0, 185, 0);
+}
+
+.todo-index {
+  width: 50px;
+  float: left;
+  border: 1px solid white;
+  height: 105px;
+  margin-top: -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
 }

@@ -13,6 +13,8 @@
   cursor: pointer;
   border: none;
   outline: none;
+  animation: fadeIn;
+  animation-duration: 3s;
 }
 
 .monthBtn_prev {
