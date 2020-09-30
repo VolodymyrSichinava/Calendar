@@ -67,13 +67,13 @@ export default class dayPageComponent extends Component {
   render() {
     const { year, month, day } = this.props;
     const today = new Date(year, month - 1, day);
-    const title = today.toLocaleString('default', { weekday: 'long', day: 'numeric', month: 'long' });
+    const title = today.toLocaleString('default', { day: 'numeric', month: 'long' });
     const dayWeek = today.toLocaleString('en', { weekday: 'long' });
     let dayImg = require(`../../images/${dayWeek}.png`);
     return (
       <div className='day-page'>
-        {/* <h2>{title}</h2> */}
         <img src={dayImg} className='dayImg' alt='dayImg'></img>
+        <h4>{title}</h4>
         {this.props.todos.map(todo => (
           <div 
             key={todo.id} 
@@ -88,7 +88,6 @@ export default class dayPageComponent extends Component {
         ))}
         { this.state.isFormVisible ?
           <form onSubmit={this.handleSubmit}>
-            <p>Add Todos</p>
             <div className='todo-form'>
               <span>Title</span>
               <input
@@ -105,7 +104,7 @@ export default class dayPageComponent extends Component {
               <input
                 type='submit'
                 value='&#10004; Submit'/>
-              <button onClick={this.handleDeleteButtonClick}>&#10008; Delete</button>
+              <button className='button-delete' onClick={this.handleDeleteButtonClick}>&#10008; Delete</button>
             </div>
           </form> : <button className='button-add' onClick={this.handleAddButtonClick}>&#9997; Add Todos</button> }
       </div>
