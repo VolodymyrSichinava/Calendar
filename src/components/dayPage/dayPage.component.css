@@ -19,6 +19,8 @@
   min-width: 550px;
   margin-top: 25px;
   text-align: center;
+  animation: bounceInUp ;
+  animation-duration: 1s;
 }
 
 .dayImg {

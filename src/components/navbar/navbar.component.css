@@ -1,15 +1,24 @@
 .navbar {
-  width: 1300px;
+  width: 1500px;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
   font-size: 35px;
-  margin-top: 40px;
   animation: fadeInDown;
   animation-duration: 2s;
+  background: url(../../images/lamp.png) no-repeat;
+  background-position: top;
+  padding-top: 200px;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
+}
+.current_year {
+  margin-left: 20px;
+}
+
+.current_today {
+  width: 190px;
 }

@@ -6,8 +6,8 @@
   padding-top: 35px;
   padding-bottom: 10px;
   min-height: 310px;
-  box-shadow: 15px 15px 25px -7px rgba(0,0,0,0.76),
-  inset 15px 15px 25px -10px rgba(0,0,0,0.76);
+  box-shadow: 0px 35px 56px -6px rgba(0,0,0,0.94),
+  inset 0px 200px 84px -200px rgba(0,0,0,1);
   position: relative;
 }
 

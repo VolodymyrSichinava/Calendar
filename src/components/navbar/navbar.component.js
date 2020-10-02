@@ -7,13 +7,13 @@ export default class NavbarComponent extends Component {
     return (
       <div className='navbar'>
         <Link to='/year/current'>
-          <div>Current Year</div>
+          <div className='current_year'>Current Year</div>
         </Link>
         <Link to='/year/current/month/current'>
-          <div>Current Month</div>
+          <div className='current_month'>Current Month</div>
         </Link>
         <Link to='/today'>
-          <div>Today</div>
+          <div className='current_today'>Today</div>
         </Link>
       </div>
     );
